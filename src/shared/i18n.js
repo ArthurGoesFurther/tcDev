@@ -1,5 +1,5 @@
 const ru = {
-  appName: 'Разминка',
+  appName: 'TakeCareDev',
 
   'ex.leftRight.title': 'Влево — вправо',
   'ex.leftRight.hint': 'Води глазами за моими зрачками. Голова неподвижна.',
@@ -48,7 +48,7 @@ const ru = {
 
   'notify.walkSoonTitle': 'Скоро перерыв',
   'notify.walkSoonBody': 'Через {0} — время встать и походить.',
-  'notify.runningTitle': 'Разминка работает',
+  'notify.runningTitle': 'TakeCareDev работает',
   'notify.runningBody': 'Живу в трее. Настройки — там же или через повторный запуск.',
 
   'break.title': 'Время размяться!',
@@ -72,7 +72,7 @@ const ru = {
     'Пройдись и посмотри в окно вдаль.',
   ],
 
-  'set.title': 'Разминка — настройки',
+  'set.title': 'TakeCareDev — настройки',
   'set.statusEyes': 'Глаза через {0}',
   'set.statusWalk': 'перерыв через {0}',
   'set.statusOff': 'выкл.',
@@ -125,7 +125,7 @@ const ru = {
 };
 
 const en = {
-  appName: 'Razminka',
+  appName: 'TakeCareDev',
 
   'ex.leftRight.title': 'Left — right',
   'ex.leftRight.hint': 'Follow my pupils with your eyes. Keep your head still.',
@@ -174,7 +174,7 @@ const en = {
 
   'notify.walkSoonTitle': 'Break soon',
   'notify.walkSoonBody': 'In {0} — time to stand up and walk.',
-  'notify.runningTitle': 'Razminka is running',
+  'notify.runningTitle': 'TakeCareDev is running',
   'notify.runningBody': 'I live in the tray. Settings are there, or just launch me again.',
 
   'break.title': 'Time to move!',
@@ -198,7 +198,7 @@ const en = {
     'Walk around and look far out of the window.',
   ],
 
-  'set.title': 'Razminka — settings',
+  'set.title': 'TakeCareDev — settings',
   'set.statusEyes': 'Eyes in {0}',
   'set.statusWalk': 'break in {0}',
   'set.statusOff': 'off',

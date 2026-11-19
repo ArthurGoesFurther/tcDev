@@ -7,7 +7,7 @@ const linuxEntry = () =>
   path.join(
     process.env.XDG_CONFIG_HOME || path.join(os.homedir(), '.config'),
     'autostart',
-    'razminka.desktop',
+    'takecaredev.desktop',
   );
 
 const quote = (arg) => `"${arg.replace(/(["`$\\])/g, '\\$1')}"`;
@@ -43,7 +43,7 @@ export const setAutostart = (enabled) => {
     [
       '[Desktop Entry]',
       'Type=Application',
-      'Name=Razminka',
+      'Name=TakeCareDev',
       'Comment=Eye exercise and walking break reminders',
       `Exec=${linuxCommand()}`,
       'Terminal=false',

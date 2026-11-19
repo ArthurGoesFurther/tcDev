@@ -24,8 +24,8 @@ const session = detectSession();
 const ozoneArg = process.argv.find((arg) => arg.startsWith('--ozone-platform='));
 const ozone = ozoneArg?.split('=')[1] ?? app.commandLine.getSwitchValue('ozone-platform');
 
-if (process.env.RAZMINKA_DATA_DIR) {
-  app.setPath('userData', path.resolve(process.env.RAZMINKA_DATA_DIR));
+if (process.env.TCDEV_DATA_DIR) {
+  app.setPath('userData', path.resolve(process.env.TCDEV_DATA_DIR));
 }
 app.commandLine.appendSwitch('autoplay-policy', 'no-user-gesture-required');
 
@@ -50,7 +50,7 @@ if (session.xwayland && !ozoneArg) {
 
 async function main() {
   if (process.platform === 'darwin') app.dock?.hide();
-  if (process.platform === 'win32') app.setAppUserModelId('dev.razminka.app');
+  if (process.platform === 'win32') app.setAppUserModelId('dev.tcdev.app');
   Menu.setApplicationMenu(
     process.platform === 'darwin'
       ? Menu.buildFromTemplate([{ role: 'appMenu' }, { role: 'editMenu' }])
@@ -72,7 +72,7 @@ async function main() {
   const cursor = createCursorTracker(session, ozone);
   const appIcon = createAppIcon();
   console.log(
-    `[razminka] ${process.platform}${session.wayland ? ' wayland' : ''}, cursor: ${cursor.mode}, idle: ${idle.name}, data: ${dataDir}`,
+    `[tcdev] ${process.platform}${session.wayland ? ' wayland' : ''}, cursor: ${cursor.mode}, idle: ${idle.name}, data: ${dataDir}`,
   );
 
   const lang = () => resolveLanguage(store.get().language, app.getLocale());
@@ -121,7 +121,7 @@ async function main() {
     try {
       if (await face.show({ exercise, eyes: store.get().eyes, lang: lang() })) stats.bump('eyes');
     } catch (error) {
-      console.error('[razminka] eye exercise failed', error);
+      console.error('[tcdev] eye exercise failed', error);
     } finally {
       scheduler.finishEye();
       refresh();
@@ -130,7 +130,7 @@ async function main() {
 
   const runWalk = () =>
     breaks.start({ walk: store.get().walk, lang: lang() }).catch((error) => {
-      console.error('[razminka] break failed', error);
+      console.error('[tcdev] break failed', error);
       breaks.end(null);
       scheduler.finishWalk('skipped');
     });
@@ -213,7 +213,7 @@ async function main() {
     try {
       setAutostart(enabled);
     } catch (error) {
-      console.error('[razminka] autostart failed', error);
+      console.error('[tcdev] autostart failed', error);
     }
   };
 
@@ -225,7 +225,7 @@ async function main() {
       t('notify.walkSoonBody', sec < 60 ? t('time.sec', sec) : formatLeft(lang(), sec)),
     ),
   );
-  scheduler.on('natural-break', () => console.log('[razminka] away long enough, timers restarted'));
+  scheduler.on('natural-break', () => console.log('[tcdev] away long enough, timers restarted'));
   scheduler.on('paused', refresh);
   scheduler.on('resumed', refresh);
 

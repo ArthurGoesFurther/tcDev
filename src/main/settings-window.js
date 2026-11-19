@@ -17,7 +17,7 @@ export const createSettingsWindow = ({ preload, page, icon }) => {
       minHeight: 480,
       show: false,
       icon,
-      title: 'Razminka',
+      title: 'TakeCareDev',
       backgroundColor: nativeTheme.shouldUseDarkColors ? '#1c1a22' : '#f5f3fa',
       autoHideMenuBar: true,
       webPreferences: { preload, sandbox: true },

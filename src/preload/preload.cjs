@@ -6,7 +6,7 @@ const subscribe = (channel) => (callback) => {
   return () => ipcRenderer.removeListener(channel, listener);
 };
 
-contextBridge.exposeInMainWorld('razminka', {
+contextBridge.exposeInMainWorld('tcdev', {
   face: {
     onStart: subscribe('face:start'),
     done: () => ipcRenderer.send('face:done'),

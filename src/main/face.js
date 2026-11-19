@@ -94,7 +94,7 @@ export const createFacePresenter = ({ preload, page, cursor }) => {
     const position = eyes.position === 'cursor' && !pointer ? 'bottom-right' : eyes.position;
     const spot = placeAt(position, pointer ?? screen.getCursorScreenPoint(), size);
     console.log(
-      `[razminka] eyes: ${exercise} at ${spot.x},${spot.y} (${position}, pointer ${pointer ? `${pointer.x},${pointer.y}` : 'unknown'})`,
+      `[tcdev] eyes: ${exercise} at ${spot.x},${spot.y} (${position}, pointer ${pointer ? `${pointer.x},${pointer.y}` : 'unknown'})`,
     );
 
     const win = new BrowserWindow({

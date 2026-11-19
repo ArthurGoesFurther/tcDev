@@ -3,7 +3,7 @@ import { Menu, Tray } from 'electron';
 /** Rebuilds the menu only when its text changes: Linux tray menus flicker on every update. */
 export const createTray = ({ icons, menu, onClick }) => {
   const tray = new Tray(icons.normal);
-  tray.setToolTip('Razminka');
+  tray.setToolTip('TakeCareDev');
   if (process.platform === 'win32') tray.on('click', onClick);
 
   let signature = '';

@@ -39,7 +39,7 @@ const render = () => {
   $('#note').textContent = state.strict && !done ? t('break.strictNote') : '';
 };
 
-window.razminka.breakScreen.onState((next) => {
+window.tcdev.breakScreen.onState((next) => {
   const first = !state;
   const finished = state?.phase === 'running' && next.phase === 'done';
   state = next;
@@ -49,7 +49,7 @@ window.razminka.breakScreen.onState((next) => {
 
 for (const id of ['snooze', 'skip', 'close']) {
   $(`#${id}`).addEventListener('click', () => {
-    if (performance.now() - shownAt > ARM_DELAY_MS) window.razminka.breakScreen.action(id);
+    if (performance.now() - shownAt > ARM_DELAY_MS) window.tcdev.breakScreen.action(id);
   });
 }
 

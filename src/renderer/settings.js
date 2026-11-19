@@ -4,7 +4,7 @@ import { LIMITS, ORDERS, POSITIONS } from '../shared/settings.js';
 import { FACE_H, FACE_W, drawFace } from '../shared/sprite.js';
 import { createPixelCanvas, poseKey } from './pixels.js';
 
-const api = window.razminka.settings;
+const api = window.tcdev.settings;
 let { settings, lang, info, status } = await api.load();
 
 const t = (key, ...args) => translate(lang, key, ...args);

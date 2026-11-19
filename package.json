@@ -1,15 +1,15 @@
 {
-  "name": "razminka",
-  "productName": "Razminka",
+  "name": "takecaredev",
+  "productName": "TakeCareDev",
   "version": "0.1.0",
   "description": "Pixel-face reminders for eye exercises and walking breaks",
-  "homepage": "https://cursor.com/codebase/assolyadances/razminka",
+  "homepage": "https://github.com/ArthurGoesFurther/tcDev",
   "author": {
     "name": "arthur",
     "email": "a.nurgozhayev@verigram.kz"
   },
   "private": true,
-  "desktopName": "razminka.desktop",
+  "desktopName": "takecaredev.desktop",
   "type": "module",
   "main": "src/main/main.js",
   "scripts": {
@@ -28,8 +28,8 @@
     "prettier": "^3.10.1"
   },
   "build": {
-    "appId": "dev.razminka.app",
-    "productName": "Razminka",
+    "appId": "dev.tcdev.app",
+    "productName": "TakeCareDev",
     "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
     "directories": {
       "output": "dist",

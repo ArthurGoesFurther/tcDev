@@ -9,10 +9,10 @@ const $ = (selector) => document.querySelector(selector);
 
 const finish = () => {
   document.body.classList.replace('show', 'hide');
-  setTimeout(() => window.razminka.face.done(), OUTRO_MS);
+  setTimeout(() => window.tcdev.face.done(), OUTRO_MS);
 };
 
-window.razminka.face.onStart(({ exercise, durationSec, scale, showHint, sound, side, lang }) => {
+window.tcdev.face.onStart(({ exercise, durationSec, scale, showHint, sound, side, lang }) => {
   const ex = exerciseById(exercise);
   const classes = document.body.classList;
   classes.toggle('flip', side === 'left');
