@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <title>Razminka</title>
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <header>
+      <canvas id="preview"></canvas>
+      <div class="head-text">
+        <h1 id="app-name"></h1>
+        <div id="status"></div>
+        <div id="stats"></div>
+        <div id="caption"></div>
+      </div>
+      <div class="head-actions">
+        <button id="pause-btn" type="button"></button>
+        <button id="reset-btn" type="button"></button>
+      </div>
+    </header>
+    <main id="form"></main>
+    <footer id="footer"></footer>
+    <script type="module" src="settings.js"></script>
+  </body>
+</html>

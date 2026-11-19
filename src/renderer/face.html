@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <link rel="stylesheet" href="face.css" />
+  </head>
+  <body>
+    <main id="root">
+      <div class="face-col">
+        <canvas id="face"></canvas>
+        <div class="track mini"><div class="bar"></div></div>
+      </div>
+      <section id="bubble">
+        <div id="title"></div>
+        <div id="hint"></div>
+        <div class="progress">
+          <div class="track"><div class="bar"></div></div>
+          <span id="secs"></span>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="face.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline'"
+    />
+    <link rel="stylesheet" href="break.css" />
+  </head>
+  <body>
+    <main class="card">
+      <canvas id="walker"></canvas>
+      <h1 id="title"></h1>
+      <p id="tip"></p>
+      <div id="timer"></div>
+      <div class="track"><div class="bar"></div></div>
+      <p id="status"></p>
+      <div class="buttons">
+        <button id="snooze" type="button"></button>
+        <button id="skip" type="button"></button>
+        <button id="close" type="button" class="primary"></button>
+      </div>
+      <p id="note"></p>
+    </main>
+    <script type="module" src="break.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+{
+  "name": "razminka",
+  "productName": "Razminka",
+  "version": "0.1.0",
+  "description": "Pixel-face reminders for eye exercises and walking breaks",
+  "homepage": "https://cursor.com/codebase/assolyadances/razminka",
+  "author": {
+    "name": "arthur",
+    "email": "a.nurgozhayev@verigram.kz"
+  },
+  "private": true,
+  "desktopName": "razminka.desktop",
+  "type": "module",
+  "main": "src/main/main.js",
+  "scripts": {
+    "start": "electron . --no-sandbox",
+    "test": "node --test",
+    "format": "prettier --write .",
+    "icons": "node scripts/make-icons.js",
+    "dist": "electron-builder --publish never",
+    "dist:linux": "electron-builder --linux --publish never",
+    "dist:win": "electron-builder --win --publish never",
+    "dist:mac": "electron-builder --mac --publish never"
+  },
+  "devDependencies": {
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.0",
+    "prettier": "^3.10.1"
+  },
+  "build": {
+    "appId": "dev.razminka.app",
+    "productName": "Razminka",
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "afterSign": "scripts/adhoc-sign.js",
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "build/icons",
+      "syncDesktopName": true,
+      "executableArgs": [
+        "--ozone-platform=x11"
+      ],
+      "synopsis": "Eye exercise and walking break reminders",
+      "maintainer": "arthur <a.nurgozhayev@verigram.kz>"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "build/icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-win-portable.${ext}"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "arm64",
+            "x64"
+          ]
+        }
+      ],
+      "category": "public.app-category.healthcare-fitness",
+      "icon": "build/icon.png",
+      "identity": "-",
+      "hardenedRuntime": false,
+      "extendInfo": {
+        "LSUIElement": true
+      }
+    }
+  }
+}

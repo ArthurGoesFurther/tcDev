@@ -1,0 +1,281 @@
+const ru = {
+  appName: 'Разминка',
+
+  'ex.leftRight.title': 'Влево — вправо',
+  'ex.leftRight.hint': 'Води глазами за моими зрачками. Голова неподвижна.',
+  'ex.upDown.title': 'Вверх — вниз',
+  'ex.upDown.hint': 'Смотри вверх и вниз, не двигая головой.',
+  'ex.circles.title': 'Круги',
+  'ex.circles.hint': 'Медленно вращай глазами по кругу, потом в обратную сторону.',
+  'ex.diagonals.title': 'Диагонали',
+  'ex.diagonals.hint': 'Смотри из угла в угол: сначала одна диагональ, потом другая.',
+  'ex.figureEight.title': 'Восьмёрка',
+  'ex.figureEight.hint': 'Рисуй глазами лежащую восьмёрку ∞.',
+  'ex.blink.title': 'Поморгай',
+  'ex.blink.hint': 'Часто и легко моргай — так глаза увлажняются.',
+  'ex.squeeze.title': 'Зажмурься',
+  'ex.squeeze.hint': 'Крепко зажмурься на пару секунд, потом широко открой глаза.',
+  'ex.farAway.title': 'Вдаль',
+  'ex.farAway.hint': 'Посмотри в окно или на самый дальний предмет (от 6 метров).',
+  'ex.nearFar.title': 'Близко — далеко',
+  'ex.nearFar.hint': 'Посмотри на кончик носа, потом вдаль. Чередуй.',
+  'ex.palming.title': 'Отдых',
+  'ex.palming.hint': 'Закрой глаза и расслабься. Можно накрыть их тёплыми ладонями.',
+
+  'time.min': '{0} мин',
+  'time.sec': '{0} с',
+  'time.lessMin': '< 1 мин',
+
+  'tray.eyesIn': 'Глаза: через {0}',
+  'tray.walkIn': 'Перерыв: через {0}',
+  'tray.eyesOff': 'Глаза: выключено',
+  'tray.walkOff': 'Перерыв: выключен',
+  'tray.pausedUntil': 'На паузе до {0}',
+  'tray.paused': 'На паузе',
+  'tray.today': 'Сегодня: глаза {0} · перерывы {1}',
+  'tray.eyeNow': 'Упражнение для глаз сейчас',
+  'tray.walkNow': 'Перерыв сейчас',
+  'tray.skipBreak': 'Пропустить перерыв',
+  'tray.pause': 'Пауза',
+  'tray.pause30': '30 минут',
+  'tray.pause60': '1 час',
+  'tray.pause120': '2 часа',
+  'tray.pauseForever': 'Пока не возобновлю',
+  'tray.resume': 'Возобновить',
+  'tray.reset': 'Сбросить таймеры',
+  'tray.settings': 'Настройки…',
+  'tray.quit': 'Выход',
+
+  'notify.walkSoonTitle': 'Скоро перерыв',
+  'notify.walkSoonBody': 'Через {0} — время встать и походить.',
+  'notify.runningTitle': 'Разминка работает',
+  'notify.runningBody': 'Живу в трее. Настройки — там же или через повторный запуск.',
+
+  'break.title': 'Время размяться!',
+  'break.status.running': 'Иди-иди, я посторожу',
+  'break.status.waiting': 'Таймер ждёт, пока ты отойдёшь от компьютера',
+  'break.status.plain': 'Встань и подвигайся, пока идёт таймер',
+  'break.doneTitle': 'Готово!',
+  'break.doneText': 'Можно возвращаться к работе.',
+  'break.snooze': 'Отложить на {0}',
+  'break.skip': 'Пропустить',
+  'break.close': 'Закрыть',
+  'break.strictNote': 'Строгий режим. Экстренно пропустить можно через меню в трее.',
+  'break.tips': [
+    'Встань и пройдись — хотя бы до кухни и обратно.',
+    'Пройдись по лестнице пару пролётов.',
+    'Сделай 10 приседаний.',
+    'Потянись вверх, покрути плечами и шеей.',
+    'Сделай наклоны в стороны и вперёд.',
+    'Налей себе воды и выпей её стоя.',
+    'Походи на месте, высоко поднимая колени.',
+    'Пройдись и посмотри в окно вдаль.',
+  ],
+
+  'set.title': 'Разминка — настройки',
+  'set.statusEyes': 'Глаза через {0}',
+  'set.statusWalk': 'перерыв через {0}',
+  'set.statusOff': 'выкл.',
+  'set.statusBusy': 'сейчас',
+  'set.stats': 'Сегодня: упражнений {0}, перерывов {1}, пропущено {2}',
+  'set.section.eyes': 'Гимнастика для глаз',
+  'set.section.walk': 'Перерыв: встать и походить',
+  'set.section.general': 'Общее',
+  'set.enabled': 'Включено',
+  'set.eyes.intervalMin': 'Каждые, мин',
+  'set.eyes.durationSec': 'Длительность упражнения, сек',
+  'set.eyes.position': 'Где показывать лицо',
+  'set.eyes.followCursor': 'Следовать за курсором',
+  'set.eyes.faceScale': 'Размер лица',
+  'set.eyes.showHint': 'Подсказка рядом с лицом',
+  'set.eyes.order': 'Порядок упражнений',
+  'set.eyes.sound': 'Звук',
+  'set.eyes.exercises': 'Упражнения',
+  'set.eyes.exercisesNote': 'Нажми на название — лицо в шапке покажет, ▶ — покажет у курсора.',
+  'set.walk.intervalMin': 'Каждые, мин',
+  'set.walk.durationMin': 'Длительность перерыва, мин',
+  'set.walk.snoozeMin': '«Отложить» на, мин',
+  'set.walk.warnSec': 'Предупредить заранее, сек (0 — не надо)',
+  'set.walk.requireIdle': 'Засчитывать только время вдали от компьютера',
+  'set.walk.strict': 'Строгий режим: на весь экран и без «Пропустить»',
+  'set.walk.sound': 'Звук',
+  'set.idle.resetAfterMin': 'Если меня нет дольше, мин — начать отсчёт заново (0 — выкл.)',
+  'set.language': 'Язык',
+  'set.autostart': 'Запускать при входе в систему',
+  'set.pos.cursor': 'Возле курсора',
+  'set.pos.top-left': 'Слева сверху',
+  'set.pos.top-right': 'Справа сверху',
+  'set.pos.bottom-left': 'Слева снизу',
+  'set.pos.bottom-right': 'Справа снизу',
+  'set.pos.center': 'По центру',
+  'set.order.random': 'Случайно',
+  'set.order.sequential': 'По очереди',
+  'set.lang.auto': 'Как в системе',
+  'set.btn.eyeNow': 'Показать сейчас',
+  'set.btn.walkNow': 'Перерыв сейчас',
+  'set.btn.reset': 'Сбросить таймеры',
+  'set.btn.pause': 'Пауза 30 мин',
+  'set.btn.resume': 'Возобновить',
+  'set.note.waylandFollow':
+    'Wayland не даёт приложениям следить за курсором: лицо появится рядом с ним, но догонять не будет.',
+  'set.note.noCursor':
+    'В этой сессии позиция курсора недоступна — лицо будет в правом нижнем углу.',
+  'set.note.idleUnreliable':
+    'Здесь не получается узнать время простоя, поэтому сброс по отсутствию и «только вдали от компьютера» не работают.',
+};
+
+const en = {
+  appName: 'Razminka',
+
+  'ex.leftRight.title': 'Left — right',
+  'ex.leftRight.hint': 'Follow my pupils with your eyes. Keep your head still.',
+  'ex.upDown.title': 'Up — down',
+  'ex.upDown.hint': 'Look up and down without moving your head.',
+  'ex.circles.title': 'Circles',
+  'ex.circles.hint': 'Slowly roll your eyes in a circle, then the other way.',
+  'ex.diagonals.title': 'Diagonals',
+  'ex.diagonals.hint': 'Look corner to corner: one diagonal, then the other.',
+  'ex.figureEight.title': 'Figure eight',
+  'ex.figureEight.hint': 'Trace a sideways eight ∞ with your eyes.',
+  'ex.blink.title': 'Blink',
+  'ex.blink.hint': 'Blink quickly and lightly — it keeps your eyes moist.',
+  'ex.squeeze.title': 'Squeeze',
+  'ex.squeeze.hint': 'Squeeze your eyes shut for a couple of seconds, then open them wide.',
+  'ex.farAway.title': 'Far away',
+  'ex.farAway.hint': 'Look out of the window or at the farthest object (6+ m away).',
+  'ex.nearFar.title': 'Near — far',
+  'ex.nearFar.hint': 'Look at the tip of your nose, then far away. Alternate.',
+  'ex.palming.title': 'Rest',
+  'ex.palming.hint': 'Close your eyes and relax. You can cover them with warm palms.',
+
+  'time.min': '{0} min',
+  'time.sec': '{0} s',
+  'time.lessMin': '< 1 min',
+
+  'tray.eyesIn': 'Eyes: in {0}',
+  'tray.walkIn': 'Break: in {0}',
+  'tray.eyesOff': 'Eyes: off',
+  'tray.walkOff': 'Break: off',
+  'tray.pausedUntil': 'Paused until {0}',
+  'tray.paused': 'Paused',
+  'tray.today': 'Today: eyes {0} · breaks {1}',
+  'tray.eyeNow': 'Eye exercise now',
+  'tray.walkNow': 'Take a break now',
+  'tray.skipBreak': 'Skip the break',
+  'tray.pause': 'Pause',
+  'tray.pause30': '30 minutes',
+  'tray.pause60': '1 hour',
+  'tray.pause120': '2 hours',
+  'tray.pauseForever': 'Until I resume',
+  'tray.resume': 'Resume',
+  'tray.reset': 'Reset timers',
+  'tray.settings': 'Settings…',
+  'tray.quit': 'Quit',
+
+  'notify.walkSoonTitle': 'Break soon',
+  'notify.walkSoonBody': 'In {0} — time to stand up and walk.',
+  'notify.runningTitle': 'Razminka is running',
+  'notify.runningBody': 'I live in the tray. Settings are there, or just launch me again.',
+
+  'break.title': 'Time to move!',
+  'break.status.running': 'Off you go, I will keep watch',
+  'break.status.waiting': 'The timer waits until you step away from the computer',
+  'break.status.plain': 'Stand up and move while the timer runs',
+  'break.doneTitle': 'Done!',
+  'break.doneText': 'You can get back to work.',
+  'break.snooze': 'Snooze {0}',
+  'break.skip': 'Skip',
+  'break.close': 'Close',
+  'break.strictNote': 'Strict mode. Emergency skip is in the tray menu.',
+  'break.tips': [
+    'Stand up and walk — at least to the kitchen and back.',
+    'Take the stairs for a couple of flights.',
+    'Do 10 squats.',
+    'Stretch up, roll your shoulders and neck.',
+    'Bend to the sides and forward.',
+    'Pour yourself some water and drink it standing.',
+    'March in place, knees up high.',
+    'Walk around and look far out of the window.',
+  ],
+
+  'set.title': 'Razminka — settings',
+  'set.statusEyes': 'Eyes in {0}',
+  'set.statusWalk': 'break in {0}',
+  'set.statusOff': 'off',
+  'set.statusBusy': 'now',
+  'set.stats': 'Today: exercises {0}, breaks {1}, skipped {2}',
+  'set.section.eyes': 'Eye exercises',
+  'set.section.walk': 'Break: stand up and walk',
+  'set.section.general': 'General',
+  'set.enabled': 'Enabled',
+  'set.eyes.intervalMin': 'Every, min',
+  'set.eyes.durationSec': 'Exercise duration, sec',
+  'set.eyes.position': 'Where to show the face',
+  'set.eyes.followCursor': 'Follow the cursor',
+  'set.eyes.faceScale': 'Face size',
+  'set.eyes.showHint': 'Hint bubble next to the face',
+  'set.eyes.order': 'Exercise order',
+  'set.eyes.sound': 'Sound',
+  'set.eyes.exercises': 'Exercises',
+  'set.eyes.exercisesNote':
+    'Click a name to preview it in the header, ▶ shows it next to the cursor.',
+  'set.walk.intervalMin': 'Every, min',
+  'set.walk.durationMin': 'Break duration, min',
+  'set.walk.snoozeMin': '“Snooze” for, min',
+  'set.walk.warnSec': 'Warn in advance, sec (0 — no)',
+  'set.walk.requireIdle': 'Count only time away from the computer',
+  'set.walk.strict': 'Strict mode: full screen, no “Skip”',
+  'set.walk.sound': 'Sound',
+  'set.idle.resetAfterMin': 'Restart the countdown after being away for, min (0 — off)',
+  'set.language': 'Language',
+  'set.autostart': 'Launch at login',
+  'set.pos.cursor': 'Next to the cursor',
+  'set.pos.top-left': 'Top left',
+  'set.pos.top-right': 'Top right',
+  'set.pos.bottom-left': 'Bottom left',
+  'set.pos.bottom-right': 'Bottom right',
+  'set.pos.center': 'Center',
+  'set.order.random': 'Random',
+  'set.order.sequential': 'In turn',
+  'set.lang.auto': 'System',
+  'set.btn.eyeNow': 'Show now',
+  'set.btn.walkNow': 'Break now',
+  'set.btn.reset': 'Reset timers',
+  'set.btn.pause': 'Pause 30 min',
+  'set.btn.resume': 'Resume',
+  'set.note.waylandFollow':
+    'Wayland does not let apps track the cursor: the face appears next to it but will not follow.',
+  'set.note.noCursor':
+    'The cursor position is unavailable in this session — the face goes to the bottom right corner.',
+  'set.note.idleUnreliable':
+    'Idle time is unavailable here, so the away reset and “only away from the computer” are off.',
+};
+
+const DICTS = { ru, en };
+export const LANGS = Object.keys(DICTS);
+
+const RU_LOCALES = ['ru', 'be', 'kk', 'ky'];
+
+export const resolveLanguage = (setting, locale = '') => {
+  if (DICTS[setting]) return setting;
+  return RU_LOCALES.includes(locale.toLowerCase().split(/[-_]/)[0]) ? 'ru' : 'en';
+};
+
+export const translate = (lang, key, ...args) => {
+  const value = DICTS[lang]?.[key] ?? en[key] ?? key;
+  if (typeof value !== 'string') return value;
+  return value.replace(/\{(\d)\}/g, (_, i) => String(args[Number(i)] ?? ''));
+};
+
+export const formatLeft = (lang, sec) => {
+  if (sec < 60) return translate(lang, 'time.lessMin');
+  return translate(lang, 'time.min', Math.ceil(sec / 60));
+};
+
+export const formatClock = (sec) => {
+  const s = Math.max(0, Math.ceil(sec));
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const pad = (n) => String(n).padStart(2, '0');
+  return h ? `${h}:${pad(m)}:${pad(s % 60)}` : `${pad(m)}:${pad(s % 60)}`;
+};

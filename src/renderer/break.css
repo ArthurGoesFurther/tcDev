@@ -1,0 +1,149 @@
+:root {
+  --ink: #3b2a40;
+  --paper: #fffdf6;
+  --accent: #7b6cf6;
+  --muted: #6f6378;
+  --track: #efe6d6;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: transparent;
+  overflow: hidden;
+  user-select: none;
+  font-family: system-ui, 'Segoe UI', Ubuntu, Roboto, sans-serif;
+  color: var(--ink);
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+body.strict {
+  background: #17121f;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 440px;
+  padding: 20px 26px 18px;
+  background: var(--paper);
+  border: 3px solid var(--ink);
+  border-radius: 14px;
+  box-shadow: 5px 5px 0 rgba(59, 42, 64, 0.35);
+  text-align: center;
+  animation: pop 0.35s cubic-bezier(0.2, 1.5, 0.4, 1);
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+
+#walker {
+  display: block;
+  margin: 0 auto 4px;
+  image-rendering: pixelated;
+}
+
+h1 {
+  margin: 4px 0 6px;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+#tip {
+  min-height: 2.7em;
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+#timer {
+  font:
+    800 44px/1 ui-monospace,
+    'SF Mono',
+    Menlo,
+    Consolas,
+    monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.done #timer {
+  color: #2f9e6e;
+}
+
+.track {
+  height: 10px;
+  margin: 12px 0 8px;
+  border: 2px solid var(--ink);
+  border-radius: 6px;
+  background: var(--track);
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left center;
+  transition: transform 1s linear;
+}
+
+#status {
+  min-height: 1.3em;
+  margin: 0 0 14px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+#status.waiting {
+  color: #c2405a;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+button {
+  padding: 9px 16px;
+  font:
+    700 14px system-ui,
+    'Segoe UI',
+    Ubuntu,
+    Roboto,
+    sans-serif;
+  color: var(--ink);
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 2px 2px 0 var(--ink);
+  cursor: pointer;
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+button.primary {
+  color: #fff;
+  background: var(--accent);
+}
+
+button[hidden] {
+  display: none;
+}
+
+#note {
+  min-height: 1em;
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
